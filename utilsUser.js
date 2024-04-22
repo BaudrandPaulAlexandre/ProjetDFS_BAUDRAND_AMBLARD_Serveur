@@ -1,32 +1,25 @@
 const fs = require('fs');
-//const {createBlog, deleteBlog} = require("./utilsBlog");
+const { getProjectsByManager, deleteProject} = require('./utilsProject');
 
-// Fonction pour lire les données utilisateur
+// Récupération de tous les utilisateurs
 function readUsersData(filePath) {
     let data = fs.readFileSync(filePath, 'utf-8');
-    let jsonData = JSON.parse(data);
-    return jsonData;
+    return  JSON.parse(data);
 }
 
-// Fonction pour creer un utilisateur et le blog associé
+// Création d'un utilisateur
 function createUser(filePath, dataObject) {
     let users = readUsersData(filePath);
-
     let maxId = Math.max(...users.map(users => users.id));
     dataObject.id = maxId + 1;
-    /*
-    dataObject.idBlog = maxId + 1;
-    */
-    //createBlog('./database/blogs.json', dataObject);
 
     users.push(dataObject);
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-
-    console.log("Utilisateur ajouté");
+    console.log("Utilisateur crée");
     return true;
 }
 
-// Fonction pour modifier des paramètres d'un utilisateur
+// Modification d'un utilisateur
 function modifyUser(filepath, dataObject) {
     let users = readUsersData(filepath);
     const idUserToModify = dataObject.id;
@@ -47,19 +40,19 @@ function modifyUser(filepath, dataObject) {
     }
 }
 
-// Fonctions utilisée pour supprimer un utilisateur dont son id est en paramètre
+// Suppression d'un utilisateur et des projets qu'il a crées
 function deleteUser(filePath, idData) {
     let users = readUsersData(filePath);
     const idUserToDelete = parseInt(idData);
     const indexUserToDelete = users.findIndex(user => user.id === idUserToDelete);
 
     if (indexUserToDelete !== -1) {
+        let managerProjects = (getProjectsByManager('./database/projects.json', idUserToDelete)).map(project => project.id);
+        for (let i = 0; i < managerProjects.length; i++) {
+            deleteProject('./database/projects.json', managerProjects[i]);
+        }
         users.splice(indexUserToDelete, 1);
-
-        //deleteBlog('./database/blogs.json', idData); // On supprime aussi le blog lié à l'utilisateur
-
         fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-
         console.log("Utilisateur supprimé");
         return true;
     } else {
@@ -67,35 +60,28 @@ function deleteUser(filePath, idData) {
         return false;
     }
 }
-/*
-// Fonction utilisée pour connecter l'utilisateur au site
-function connectUser(filePath, mail, password) {
-    const utilisateurs = readUserData(filePath);
-    const utilisateur = utilisateurs.find(utilisateur => utilisateur.email === mail);
 
-    if (!utilisateur) {
-        throw new Error(`Utilisateur "${mail}" non trouvé.`);
+// Connexion de l'utilisateur
+function connectUser(filePath, name, password) {
+    const users = readUsersData(filePath);
+    const user = users.find(user => user.name === name);
+
+    if (!user) {
+        throw new Error(`Utilisateur innexistant`);
     }
-
-    if(!utilisateur.motDePasse === password) {
-        throw new Error(`Utilisateur ${password} mauvais.`);
+    if(!user.password === password) {
+        throw new Error(`Mot de passe incorecte.`);
     }
-
-    console.log(mail);
-    console.log(password);
-
-    if(utilisateur.motDePasse === password) {
-        return utilisateur;
+    if(user.password === password) {
+        return user;
     }
-
     return undefined;
 }
-*/
 
 module.exports = {
     readUsersData,
     createUser,
     modifyUser,
-    deleteUser,/*
-    connectUser,*/
+    deleteUser,
+    connectUser
 };
