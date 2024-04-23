@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Jean",
     "lastname": "Dujardin",
-    "password" : ""
+    "password" : "test"
   },
   {
     "id": 2,
