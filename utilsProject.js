@@ -60,11 +60,6 @@ function deleteProject(filePath, idProjectToDelete) {
 function getProjectsByManager(filePath, idManager) {
     let projects = readProjectsData(filePath);
     return projects.filter(project => project.manager === idManager);
-    /*
-    let managerProjects = projects.filter(project => project.manager === idManager);
-    console.log('Filtre ' + managerProjects.map(projet => projet.id));
-    return managerProjects;
-    */
 }
 
 // Récupération des projets associés à un utilisateur
@@ -73,17 +68,11 @@ function getProjectsByUser(filePath, idUser) {
     return projects.filter(project => project.members.includes(idUser));
 }
 
-function getProjectMembers(file, idProject) {
-
-}
-
-
 module.exports = {
     readProjectsData,
     createProject,
     addUser,
     deleteProject,
     getProjectsByManager,
-    getProjectsByUser,
-    getProjectMembers
+    getProjectsByUser
 };

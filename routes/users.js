@@ -1,10 +1,11 @@
-const { readUsersData, createUser, modifyUser, deleteUser, connectUser } = require('../utilsUser');
+const { readUsersData, createUser, returnUserById, modifyUser, deleteUser, connectUser } = require('../utilsUser');
 const express = require('express');
 const filePath = './database/users.json'
 
 const router = express.Router();
 
 router.get('/', getUsers);
+router.get('/get/:id', getUserById);
 router.put('/add', putUser);
 router.post('/post', postUser)
 router.delete('/delete/:id', delUser);
@@ -15,6 +16,10 @@ module.exports = router;
 // Récupération de tous les utilisateurs
 function getUsers(req, res) {
     res.json(readUsersData(filePath));
+}
+
+function getUserById(req, res) {
+    res.json(returnUserById(filePath, req.params.id));
 }
 
 // Création d'un utilisateur

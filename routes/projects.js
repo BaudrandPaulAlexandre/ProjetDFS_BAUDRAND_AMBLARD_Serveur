@@ -1,4 +1,4 @@
-const { readProjectsData, createProject, addUser, deleteProject, getProjectsByManager, getProjectsByUser, getProjectMembers } = require('../utilsProject');
+const { readProjectsData, createProject, addUser, deleteProject, getProjectsByManager, getProjectsByUser } = require('../utilsProject');
 const express = require('express');
 const filePath = './database/projects.json'
 const router = express.Router();
@@ -9,7 +9,6 @@ router.post('/add/:id', putUser);
 router.delete('/del/:id', delProject)
 router.get('/manager/:id', getManager);
 router.get('/user/:id', getUser);
-router.get('members/:id', getMembers);
 
 module.exports = router;
 
@@ -51,9 +50,5 @@ function getManager(req, res) {
 // Récupération des projets associés à un utilisateur
 function getUser(req, res) {
     res.json(getProjectsByUser(filePath, parseInt(req.params.id)));
-}
-
-function getMembers(req, res) {
-    res.json(getProjectMembers(filePath, req))
 }
 

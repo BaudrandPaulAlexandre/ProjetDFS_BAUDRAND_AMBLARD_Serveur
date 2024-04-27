@@ -19,6 +19,14 @@ function createUser(filePath, dataObject) {
     return true;
 }
 
+// Récupération d'un utilisateur par son identifiant
+function returnUserById(filePath, idData) {
+    let users = readUsersData(filePath);
+    const idUserToGet = parseInt(idData);
+    const user = users.find(user => user.id === idUserToGet);
+    return user || false;
+}
+
 // Modification d'un utilisateur
 function modifyUser(filepath, dataObject) {
     let users = readUsersData(filepath);
@@ -84,6 +92,7 @@ function connectUser(filePath, name, password) {
 module.exports = {
     readUsersData,
     createUser,
+    returnUserById,
     modifyUser,
     deleteUser,
     connectUser
