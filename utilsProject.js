@@ -18,6 +18,14 @@ function createProject(filepath, dataObject) {
     return true;
 }
 
+// Récupération d'un projet par son identifiant
+function returnProjectById(filePath, idData) {
+    let projects = readProjectsData(filePath);
+    const idProjectToGet = parseInt(idData);
+    const project = projects.find(project => project.id === idProjectToGet);
+    return project || false;
+}
+
 // Ajout d'un utilisateur à un projet
 function addUser(filepath, idProject, idUser) {
     let projects = readProjectsData(filepath);
@@ -71,6 +79,7 @@ function getProjectsByUser(filePath, idUser) {
 module.exports = {
     readProjectsData,
     createProject,
+    returnProjectById,
     addUser,
     deleteProject,
     getProjectsByManager,

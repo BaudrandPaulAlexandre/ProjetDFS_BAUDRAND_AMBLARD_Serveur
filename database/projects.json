@@ -5,9 +5,9 @@
     "desc": "Ceci est un pur braquage",
     "nbOfMembers": 2,
     "maxNbOfMembers": 3,
-    "manager": 2,
+    "manager": 9,
     "members": [
-      2,
+      9,
       1
     ]
   },
@@ -16,76 +16,23 @@
     "name": "Ouskour",
     "desc": "C'est grave la merde",
     "nbOfMembers": 1,
-    "maxNbOfMembers": 69,
+    "maxNbOfMembers": 4,
     "manager": 2,
     "members": [
-      2
+      2,
+      9
     ]
   },
   {
     "id": 3,
-    "name": "Ouskour",
-    "desc": "C'est grave la merde",
-    "nbOfMembers": 1,
-    "maxNbOfMembers": 69,
-    "manager": 1,
-    "members": [
-      1
-    ]
-  },
-  {
-    "id": 4,
-    "name": "a",
-    "desc": "a",
-    "nbOfMembers": 1,
-    "maxNbOfMembers": null,
-    "manager": 9,
-    "members": [
-      9
-    ]
-  },
-  {
-    "id": 5,
-    "name": "a",
-    "desc": "a",
-    "nbOfMembers": 1,
-    "maxNbOfMembers": null,
-    "manager": 9,
-    "members": [
-      9
-    ]
-  },
-  {
-    "id": 6,
-    "name": "a",
-    "desc": "",
-    "nbOfMembers": 1,
-    "maxNbOfMembers": null,
-    "manager": 9,
-    "members": [
-      9
-    ]
-  },
-  {
-    "id": 7,
-    "name": "TEST",
-    "desc": "&1",
+    "name": "Aled",
+    "desc": "Putain de projet à la con",
     "nbOfMembers": 1,
     "maxNbOfMembers": 3,
-    "manager": 9,
+    "manager": 4,
     "members": [
-      9
-    ]
-  },
-  {
-    "id": 8,
-    "name": "TESTESTE",
-    "desc": "re",
-    "nbOfMembers": 1,
-    "maxNbOfMembers": null,
-    "manager": 9,
-    "members": [
-      9
+      4,
+      5
     ]
   }
 ]

@@ -18,6 +18,7 @@ function getUsers(req, res) {
     res.json(readUsersData(filePath));
 }
 
+// Récupération d'un utilisateur par son id
 function getUserById(req, res) {
     res.json(returnUserById(filePath, req.params.id));
 }

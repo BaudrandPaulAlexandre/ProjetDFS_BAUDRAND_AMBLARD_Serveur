@@ -17,7 +17,7 @@
   },
   {
     "id": 5,
-    "name": "KKK",
+    "name": "Nick",
     "lastname": "Him"
   },
   {
@@ -38,36 +38,6 @@
   },
   {
     "id": 9,
-    "name": "a",
-    "lastname": "a",
-    "password": "a"
-  },
-  {
-    "id": 10,
-    "name": "z",
-    "lastname": "z",
-    "password": "z"
-  },
-  {
-    "id": 11,
-    "name": "",
-    "lastname": "",
-    "password": ""
-  },
-  {
-    "id": 12,
-    "name": "a",
-    "lastname": "a",
-    "password": "a"
-  },
-  {
-    "id": 13,
-    "name": "q",
-    "lastname": "q",
-    "password": "q"
-  },
-  {
-    "id": 14,
     "name": "a",
     "lastname": "a",
     "password": "a"

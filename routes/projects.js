@@ -1,10 +1,12 @@
-const { readProjectsData, createProject, addUser, deleteProject, getProjectsByManager, getProjectsByUser } = require('../utilsProject');
+const { readProjectsData, createProject, returnProjectById, addUser, deleteProject, getProjectsByManager, getProjectsByUser } = require('../utilsProject');
 const express = require('express');
+const {returnUserById} = require("../utilsUser");
 const filePath = './database/projects.json'
 const router = express.Router();
 
 router.get('/', getProjects);
 router.put('/put', putProject)
+router.get('/get/:id', getProjectById);
 router.post('/add/:id', putUser);
 router.delete('/del/:id', delProject)
 router.get('/manager/:id', getManager);
@@ -17,6 +19,7 @@ function getProjects(req, res) {
     res.json(readProjectsData(filePath, res));
 }
 
+// Création d'un projet
 function putProject(req, res) {
     const newProject = {
         id: 1,
@@ -30,6 +33,11 @@ function putProject(req, res) {
         ]
     }
     res.json(createProject(filePath, newProject));
+}
+
+// Récupération d'un projet par son id
+function getProjectById(req, res) {
+    res.json(returnProjectById(filePath, req.params.id));
 }
 
 // Ajout d'un utilisateur à un projet
