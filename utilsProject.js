@@ -28,9 +28,9 @@ function returnProjectById(filePath, idData) {
 
 // Ajout d'un utilisateur à un projet
 function addUser(filepath, idProject, idUser) {
+    console.log(("tentative d'ajout"));
     let projects = readProjectsData(filepath);
     let project = projects.find(project => project.id === idProject);
-
     if (project.nbOfMembers < project.maxNbOfMembers) {
         if (!project.members.includes(idUser)) {
             project.members.push(idUser);

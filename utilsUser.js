@@ -71,9 +71,6 @@ function deleteUser(filePath, idData) {
 
 // Connexion de l'utilisateur
 function connectUser(filePath, name, password) {
-
-    console.log('tentative connexion')
-
     const users = readUsersData(filePath);
     const user = users.find(user => user.name === name);
 

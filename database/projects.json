@@ -27,7 +27,7 @@
     "id": 3,
     "name": "Aled",
     "desc": "Putain de projet à la con",
-    "nbOfMembers": 1,
+    "nbOfMembers": 2,
     "maxNbOfMembers": 3,
     "manager": 4,
     "members": [

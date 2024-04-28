@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', getProjects);
 router.put('/put', putProject)
 router.get('/get/:id', getProjectById);
-router.post('/add/:id', putUser);
+router.put('/add/:id', putUser);
 router.delete('/del/:id', delProject)
 router.get('/manager/:id', getManager);
 router.get('/user/:id', getUser);
@@ -42,7 +42,9 @@ function getProjectById(req, res) {
 
 // Ajout d'un utilisateur à un projet
 function putUser(req, res) {
-    res.json(addUser(filePath, req.body.id, parseInt(req.params.id)));
+    console.log("Receiving project ID:", req.params.id);
+    console.log("Receiving user ID from body:", req.body.id);
+    res.json(addUser(filePath, parseInt(req.params.id), req.body.id));
 }
 
 // Suppression d'un projet
