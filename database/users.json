@@ -3,43 +3,18 @@
     "id": 1,
     "name": "Jean",
     "lastname": "Dujardin",
-    "password": "test"
+    "password": "mdp"
   },
   {
     "id": 2,
-    "name": "Jean",
-    "lastname": "Cul"
+    "name": "Paul",
+    "lastname": "Baudrand",
+    "password": "pab"
   },
   {
-    "id": 4,
-    "name": "Nick",
-    "lastname": "Her"
-  },
-  {
-    "id": 5,
-    "name": "Nick",
-    "lastname": "Him"
-  },
-  {
-    "name": "Nick",
-    "lastname": "Her",
-    "id": 6
-  },
-  {
-    "id": 7,
-    "name": "Nick",
-    "lastname": "Her"
-  },
-  {
-    "id": 8,
-    "name": "f",
-    "lastname": "f",
-    "password": "f"
-  },
-  {
-    "id": 9,
-    "name": "a",
-    "lastname": "a",
-    "password": "a"
+    "id": 3,
+    "name": "Julie",
+    "lastname": "Amblard",
+    "password": "test"
   }
 ]

@@ -5,10 +5,10 @@ const filePath = './database/projects.json'
 const router = express.Router();
 
 router.get('/', getProjects);
-router.put('/put', putProject)
+router.put('/put', putProject);
 router.get('/get/:id', getProjectById);
 router.put('/add/:id', putUser);
-router.delete('/del/:id', delProject)
+router.delete('/del/:id', delProject);
 router.get('/manager/:id', getManager);
 router.get('/user/:id', getUser);
 
@@ -42,8 +42,6 @@ function getProjectById(req, res) {
 
 // Ajout d'un utilisateur à un projet
 function putUser(req, res) {
-    console.log("Receiving project ID:", req.params.id);
-    console.log("Receiving user ID from body:", req.body.id);
     res.json(addUser(filePath, parseInt(req.params.id), req.body.id));
 }
 

@@ -1,38 +1,84 @@
 [
   {
     "id": 1,
-    "name": "Carabistouille",
-    "desc": "Ceci est un pur braquage",
+    "name": "Site emargement",
+    "desc": "Créer un site d'émargement pour que les étudiants puissent émarger plus facilement par rapport au foncionnement actuel. Pour rappel, actuellement ils doivent se rappeler d'émarger, se connecter sur le Moodle et émarger.",
     "nbOfMembers": 2,
-    "maxNbOfMembers": 3,
-    "manager": 9,
+    "maxNbOfMembers": 7,
+    "manager": 1,
     "members": [
-      9,
-      1
+      1,
+      2
     ]
   },
   {
     "id": 2,
-    "name": "Ouskour",
-    "desc": "C'est grave la merde",
+    "name": "Site Restau Crous",
+    "desc": "Créer un site pour le crous où les menus de chaque restau Crous soit afficher les repas en tant réel.",
     "nbOfMembers": 1,
-    "maxNbOfMembers": 4,
+    "maxNbOfMembers": 7,
     "manager": 2,
     "members": [
-      2,
-      9
+      2
     ]
   },
   {
     "id": 3,
-    "name": "Aled",
-    "desc": "Putain de projet à la con",
-    "nbOfMembers": 2,
-    "maxNbOfMembers": 3,
-    "manager": 4,
+    "name": "Projet Domotisation",
+    "desc": "Créer une application pour faciliter la vie à la fac. Donner l'accès aux salles pour les étudiants, mettre une carte intercative, envoyer automatiquement les copies aux étudiants à la suite des corrections.",
+    "nbOfMembers": 3,
+    "maxNbOfMembers": 50,
+    "manager": 1,
     "members": [
-      4,
-      5
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Appli Localisation",
+    "desc": "Créer une application de géolocalistation pour les randonneurs afin de faciliter les manoeuvres de sauvetage des pompiers.",
+    "nbOfMembers": 1,
+    "maxNbOfMembers": 3,
+    "manager": 3,
+    "members": [
+      3
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Appli Supermarché",
+    "desc": "Mettre en place une appli qui permet aux employés de supermarché de trouver facilement l'emplacement des produits à mettre en rayon.",
+    "nbOfMembers": 3,
+    "maxNbOfMembers": 10,
+    "manager": 3,
+    "members": [
+      3,
+      2
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Site alternance",
+    "desc": "Mise en place d'un site qui regrouperais toutes les offres d'alternances des entreprises en collaborations avec la MIAGE.",
+    "nbOfMembers": 1,
+    "maxNbOfMembers": 5,
+    "manager": 1,
+    "members": [
+      1
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Lorem Ipsum",
+    "desc": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+    "nbOfMembers": 1,
+    "maxNbOfMembers": 10,
+    "manager": 2,
+    "members": [
+      2,
+      1
     ]
   }
 ]
